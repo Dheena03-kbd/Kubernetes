@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tomcatapp
+  labels:
+    name: tomcatapp
+    app: frontend
+spec:
+  containers:
+  - name: tomcat-container
+    image: dheenathayalanb/vprofileapp
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080 
